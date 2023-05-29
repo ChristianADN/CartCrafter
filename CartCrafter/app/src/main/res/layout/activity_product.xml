@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="248dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/nameProductTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="TextView"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+        <TextView
+            android:id="@+id/productDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="10sp"
+            android:textSize="18sp"
+            android:textColor="@color/dark_grey"
+            android:text="@string/description"
+            app:layout_constraintTop_toBottomOf="@+id/nameProductTextView"/>
+
+        <TextView
+            android:id="@+id/productSpectsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/spects"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productDescriptionTextView" />
+
+        <TextView
+            android:id="@+id/weightTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/weigtht_title"
+            android:textColor="@color/dark_grey"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productSpectsTextView" />
+
+        <TextView
+            android:id="@+id/weightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:text="0.00 kg"
+            android:textColor="@color/dark_grey"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/weightTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/productSpectsTextView" />
+
+        <TextView
+            android:id="@+id/scoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/totalScoreTitle"
+            android:textColor="@color/dark_grey"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightTitleTextView" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBarAverage_product"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:isIndicator="true"
+            android:max="5"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/light_grey"
+            android:progressBackgroundTintMode="src_atop"
+            android:progressTint="@color/golden"
+            android:rating="2.5"
+            android:scaleX="0.60"
+            android:scaleY="0.60"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scoreTitle"
+            app:layout_constraintTop_toBottomOf="@+id/weightTitleTextView" />
+
+        <TextView
+            android:id="@+id/pricesTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/prices"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pricesReciclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHeight_max="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/pricesTitleTextView" />
+
+        <TextView
+            android:id="@+id/reviewsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/reviews"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pricesReciclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviewsRecilerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHeight_max="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsTitleTextView" />
+
+        <Button
+            android:id="@+id/createReview_activity_product"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="59dp"
+            android:backgroundTint="#FF9800"
+            android:onClick="createReview"
+            android:visibility="gone"
+            android:padding="10sp"
+            android:text="@string/create_review"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsRecilerView" />
+
+        <Button
+            android:id="@+id/deleteReview_activity_product"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="59dp"
+            android:backgroundTint="#FF9800"
+            android:visibility="gone"
+            android:onClick="deleteReview"
+            android:padding="10sp"
+            android:text="@string/delete_review"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsRecilerView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

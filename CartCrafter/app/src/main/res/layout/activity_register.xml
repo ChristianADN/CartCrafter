@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo_RegisterActivity"
+        android:layout_width="213dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/icon" />
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_RegisterActivity"
+        app:layout_constraintVertical_bias="0.457"
+        android:layout_width="279dp"
+        android:layout_height="390dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="282dp">
+
+        <EditText
+            android:id="@+id/emailInput_RegisterActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dark_grey"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/userName"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/userInput_RegisterActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dark_grey"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/passwordInput_RegisterActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dark_grey"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/repearPasswordInput_RegisterActivity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dark_grey"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/repeatPassword"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/registerButton_RegisterActivity"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:backgroundTint="#FF9800"
+            android:padding="10sp"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="register"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

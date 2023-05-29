@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Service\CartCarfterService.User.cs" />
+    <None Include="Service\CartCarfterService.ProductShop.cs" />
+    <None Include="Service\CartCarfterService.Shop.cs" />
+    <None Include="Service\CartCarfterService.ShoppingListProduct.cs" />
+    <None Include="Service\CartCarfterService.ShoppingList.cs" />
+    <None Include="Service\CartCarfterService.Product.cs" />
+    <None Include="Service\CartCarfterService.ProductType.cs" />
+    <None Include="Service\CartCarfterService.Review.cs" />
+    <None Include="Service\CartCarfterService.Category.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

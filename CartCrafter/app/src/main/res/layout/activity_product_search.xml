@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header_ProductSearchActivity"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/light_green"
+            android:onClick="login"
+            android:padding="10sp"
+            android:text="@string/productSearch"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchInput_ProductSearchActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/dark_grey"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/light_grey" />
+
+            <Button
+                android:id="@+id/searchButton_ProductSearchActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF9800"
+                android:onClick="search"
+                android:padding="10sp"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup_ProductSearchActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioCat_ProductSearchActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/orange"
+                android:text="Categoria"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:onClick="setCategoryFragment" />
+
+            <RadioButton
+                android:id="@+id/radioTipo_ProductSearchActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/orange"
+                android:text="Tipo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:onClick="setTypeFragment" />
+
+            <RadioButton
+                android:id="@+id/radioProd_ProductSearchActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/orange"
+                android:text="Producto"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:onClick="setProductFragment" />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/search_product_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"></FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
